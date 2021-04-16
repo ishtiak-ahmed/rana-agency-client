@@ -1,0 +1,9 @@
+.sidebar li::marker {
+  color: green;
+  content: "\f00c";
+  font-family: "Font Awesome 5 free";
+}
+main {
+  margin: 0 2vw;
+  padding: 2vw;
+}
