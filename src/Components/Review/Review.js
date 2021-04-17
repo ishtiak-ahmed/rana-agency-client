@@ -2,7 +2,7 @@ import React from 'react';
 
 const Review = ({ data }) => {
     return (
-        <div className='col-md-3'>
+        <div className='col-md-4'>
             <div className="profile row">
                 <div className='col-4'>
                     <img src={data.img} alt="" />

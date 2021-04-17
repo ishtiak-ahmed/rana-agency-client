@@ -6,7 +6,7 @@ import Carousel from './Carousel';
 
 const Banner = () => {
     return (
-        <div height='500px' className='row bg-dark text-white'>
+        <div className='banner row bg-dark text-white'>
             <div className="col-md-5">
                 <h1>Rana Agency</h1>
                 <h3>The Trusted and Reliable Security Service for you.</h3>

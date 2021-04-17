@@ -10,3 +10,14 @@ textarea {
   width: 60px;
   border-radius: 50%;
 }
+header {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+header .banner {
+  flex-grow: 1;
+}
+.banner > div {
+  height: 100%;
+}

@@ -41,7 +41,7 @@ const Home = () => {
             <section className='text-center py-5 services'>
                 <div className="container">
                     <h2>Our Most Popular Services</h2>
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gridGap: '2em' }}>
+                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr 1fr', gridGap: '2em' }}>
                         {
                             services.map((service, index) => <Service key={index} data={service}></Service>)
                         }

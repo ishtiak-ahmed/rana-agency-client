@@ -17,7 +17,7 @@ const AddService = () => {
         formData.append('description', data.description)
         console.log(formData)
 
-        fetch('http://localhost:4753/addAService', {
+        fetch('https://ranaagency.herokuapp.com/addAService', {
             method: 'POST',
             body: formData
         })

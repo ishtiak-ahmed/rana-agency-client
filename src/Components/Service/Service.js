@@ -11,9 +11,9 @@ const Service = ({ data }) => {
     }
     return (
         <div className='service-item'>
-            <img src={data.image} alt="" />
+            {/* <img src={data.image} alt="" /> */}
+            <img height='200px' width="250px" src={`data:image/png;base64,${data.image.img}`} alt="" />
             <h3>{data.service}</h3>
-            <h3>$57</h3>
             <p>{data.description}</p>
             <button onClick={() => handleBook('hire bodyguard')}>Book Now</button>
         </div>
