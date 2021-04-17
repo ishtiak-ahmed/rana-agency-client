@@ -12,7 +12,7 @@ const Home = () => {
 
     // Load Services From Server
     useEffect(() => {
-        fetch('http://localhost:4753/services')
+        fetch('https://ranaagency.herokuapp.com/services')
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])
