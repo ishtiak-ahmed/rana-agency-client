@@ -1,19 +1,19 @@
 import React from 'react';
 
-const Review = () => {
+const Review = ({ data }) => {
     return (
         <div className='col-md-3'>
             <div className="profile row">
                 <div className='col-4'>
-                    <img src="" alt="" />
+                    <img src={data.img} alt="" />
                 </div>
                 <div className='col-8'>
-                    <h4>John Doe</h4>
-                    <h6>Manager, Business Farm</h6>
+                    <h4>{data.name}</h4>
+                    <h6>{data.resig || "Manager, Business Farm"}</h6>
                 </div>
             </div>
             <div>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus ipsum deserunt neque distinctio, nesciunt dicta.</p>
+                <p>{data.review}</p>
             </div>
             <div className="rating">
                 <h2>*****</h2>

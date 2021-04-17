@@ -1,9 +1,12 @@
 nav {
   display: flex;
+  justify-content: center;
+  padding: 0 2em;
 }
 nav a {
-  padding: 2em;
+  padding: 1em 2em;
   text-decoration: none;
+  line-height: 60px;
 }
 nav a:nth-child(2) {
   margin-left: auto;

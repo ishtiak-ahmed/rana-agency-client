@@ -1,12 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { useHistory } from 'react-router';
+import { BookContext } from '../../App';
 
-const Service = () => {
+const Service = ({ data }) => {
+    const [service, setService] = useContext(BookContext)
+    const history = useHistory()
+    const handleBook = (e) => {
+        setService(e)
+        history.push('/dashboard')
+    }
     return (
         <div className='service-item'>
-            <img src="" alt="" />
-            <h3>Service title</h3>
+            <img src={data.image} alt="" />
+            <h3>{data.service}</h3>
             <h3>$57</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, optio, aspernatur dolore voluptas assumenda perferendis veniam quae, obcaecati amet corporis ullam voluptatum atque!</p>
+            <p>{data.description}</p>
+            <button onClick={() => handleBook('hire bodyguard')}>Book Now</button>
         </div>
     );
 };

@@ -2,12 +2,13 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../../../App';
 import './Navbar.css'
+import logo from '../../../logo.png'
 
 const Navbar = () => {
     const [loggedinUser] = useContext(UserContext)
     return (
-        <nav>
-            <Link to='/'><img src="" alt="" />Rana Agency</Link>
+        <nav className='bg-light'>
+            <Link to='/'><img height='60px' src={logo} alt="" /></Link>
             <Link to='/'>Home</Link>
             <Link to='/about'>About</Link>
             <Link to='/contact'>Contact</Link>
