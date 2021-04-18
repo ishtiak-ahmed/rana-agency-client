@@ -4,6 +4,10 @@ textarea {
   border-radius: 5px;
   border: none;
   margin: 5px 0;
+  width: 70vw;
+}
+input.btn {
+  max-width: 200px;
 }
 .profile img {
   height: 60px;
@@ -13,14 +17,19 @@ textarea {
 header {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
   background-color: red;
 }
-header .banner {
-  flex-grow: 1;
+img {
+  overflow: hidden;
 }
-.banner > div {
-  height: 100%;
+.banner img {
+  width: 100%;
+  height: auto;
+}
+
+.header-info {
+  padding: 5em;
+  padding-left: 10vw;
 }
 
 .highlights {
@@ -43,4 +52,7 @@ header .banner {
 
 thead td {
   font-weight: bold;
+}
+tbody tr {
+  margin-top: 10px;
 }

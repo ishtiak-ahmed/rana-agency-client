@@ -34,7 +34,7 @@ const AddService = () => {
                     <p>Description:</p>
                     <textarea type="text" {...register('description', { required: true })} />
                     {errors.description && <span>This field is required</span>} <br />
-                    <input type="submit" value='Add Service' />
+                    <input className='btn btn-success' type="submit" value='Add Service' />
                 </form>
                 {
                     addStatus ? <p style={{ color: 'green' }}>Service Added sucessfully</p> : <></>

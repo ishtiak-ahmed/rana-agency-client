@@ -22,12 +22,13 @@ const Login = () => {
     }
 
     return (
-        <div style={{ display: 'grid', justifyContent: 'center' }}>
-            <img src={logo} alt="" />
-            <div>
-
+        <div className='login'>
+            <div className="logo text-center">
+                <img src={logo} alt="" />
+            </div>
+            <div className='text-center'>
                 <h2>Login with google {loggedinUser.displayName}</h2>
-                <button onClick={handleLogin}>Login With Google</button>
+                <button className='btn btn-success' onClick={handleLogin}>Login With Google</button>
             </div>
         </div>
     );

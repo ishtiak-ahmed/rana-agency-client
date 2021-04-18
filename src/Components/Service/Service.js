@@ -13,7 +13,9 @@ const Service = ({ data }) => {
     return (
         <div className='card-item  col-md-4 col-sm-6 col-12'>
             {/* <img src={data.image} alt="" /> */}
-            <img className='w-100' height='200px' src={`data:image/png;base64,${data.image.img}`} alt="" />
+            <div>
+                <img className='w-100' height='300px' src={`data:image/png;base64,${data.image.img}`} alt="" />
+            </div>
             <h3>{data.service}</h3>
             <p>{data.description}</p>
             <button className='btn btn-success' onClick={() => handleBook('hire bodyguard')}>Book Now</button>

@@ -19,7 +19,7 @@ const ServiceItem = ({ service }) => {
         <tr>
             <td>{service.service}</td>
             <td>{service.description}</td>
-            <td><button onClick={handleDelete} className='btn btn-danger'>Delete</button></td>
+            <td><button onClick={handleDelete} className='btn btn-sm btn-danger'>Delete</button></td>
         </tr>
     );
 };

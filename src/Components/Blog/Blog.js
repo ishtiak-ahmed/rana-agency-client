@@ -4,7 +4,7 @@ const Blog = () => {
     return (
         <div className='row'>
             <div className="col-md-5">
-                <img src={sefldefence} alt="" />
+                <img className='w-100' src={sefldefence} alt="" />
             </div>
             <div className="col-md-7 px-5 text-start">
                 <h2>10 Self Defence Technique We all should know.</h2>
