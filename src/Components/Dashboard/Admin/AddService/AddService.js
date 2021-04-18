@@ -1,21 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
 const AddService = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
+    const [addStatus, setAddStatus] = useState(false)
     const onSubmit = data => {
-        // const files = event.target.files
-        // const formData = {
-        //     file: data.image[0],
-        //     service: data.service,
-        //     description: data.description
-        // }
-
         const formData = new FormData()
         formData.append('file', data.image[0])
         formData.append('service', data.service)
         formData.append('description', data.description)
-        console.log(formData)
 
         fetch('https://ranaagency.herokuapp.com/addAService', {
             method: 'POST',
@@ -23,7 +16,7 @@ const AddService = () => {
         })
             .then(response => response.json())
             .then(data => {
-                console.log(data)
+                setAddStatus(data)
             })
             .catch(error => {
                 console.error(error)
@@ -43,6 +36,9 @@ const AddService = () => {
                     {errors.description && <span>This field is required</span>} <br />
                     <input type="submit" value='Add Service' />
                 </form>
+                {
+                    addStatus ? <p style={{ color: 'green' }}>Service Added sucessfully</p> : <></>
+                }
             </div>
         </div>
     );

@@ -21,3 +21,10 @@ header .banner {
 .banner > div {
   height: 100%;
 }
+
+.service-item {
+  transition: box-shadow 1s ease;
+}
+.service-item:hover {
+  box-shadow: 2px 2px 30px 10px rgba(0, 0, 0, 0.2);
+}

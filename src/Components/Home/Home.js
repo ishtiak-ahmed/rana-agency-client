@@ -32,16 +32,16 @@ const Home = () => {
                 <div className="container">
                     <h2>Our Ongoing Project</h2>
                     <div className="row">
-                        <Project></Project>
-                        <Project></Project>
-                        <Project></Project>
+                        <Project key='1'></Project>
+                        <Project key='2'></Project>
+                        <Project key='3'></Project>
                     </div>
                 </div>
             </section>
             <section className='text-center py-5 services'>
                 <div className="container">
                     <h2>Our Most Popular Services</h2>
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr 1fr', gridGap: '2em' }}>
+                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gridGap: '2em' }}>
                         {
                             services.map((service, index) => <Service key={index} data={service}></Service>)
                         }
@@ -50,14 +50,18 @@ const Home = () => {
                 </div>
             </section>
             <section className="text-center py-5 bg-light">
-                <Blog></Blog>
+                <div className="container">
+                    <Blog></Blog>
+                </div>
             </section>
             <section className='text-center py-5'>
-                <h2>What our client says</h2>
-                <div className="row">
-                    {
-                        reviews.map((review, index) => <Review key={index} data={review}></Review>)
-                    }
+                <div className="container">
+                    <h2>What our client says</h2>
+                    <div className="row">
+                        {
+                            reviews.map((review, index) => <Review key={index} data={review}></Review>)
+                        }
+                    </div>
                 </div>
             </section>
             <Footer></Footer>

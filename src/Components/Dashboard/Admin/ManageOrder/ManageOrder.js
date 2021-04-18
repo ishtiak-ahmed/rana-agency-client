@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { UserContext } from '../../../../App';
+import Order from '../../UserDashboard/OrderList/Order';
 
 const ManageOrder = () => {
     const [loggedinUser] = useContext(UserContext)
@@ -32,14 +33,7 @@ const ManageOrder = () => {
                     {
                         orderList.map(order => {
                             return (
-                                <tr>
-
-                                    <td>{order.booking.service}</td>
-                                    <td>{order.booking.email}</td>
-                                    <td>{order.booking.date}</td>
-                                    <td>{order.orderTime}</td>
-                                    <td>{order.booking.status}</td>
-                                </tr>
+                                <Order order={order}></Order>
                             )
                         })
                     }

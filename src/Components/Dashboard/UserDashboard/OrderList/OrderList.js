@@ -30,11 +30,13 @@ const OrderList = () => {
                         orderList.map(order => {
                             return (
                                 <tr>
-
                                     <td>{order.booking.service}</td>
                                     <td>{order.booking.date}</td>
                                     <td>{order.orderTime}</td>
-                                    <td>{order.booking.status}</td>
+                                    <td style={{
+                                        color: order.booking.status === 'Pending' ? 'red' :
+                                            order.booking.status === 'Ongoing' ? 'orange' : 'green'
+                                    }}>{order.booking.status}</td>
                                 </tr>
                             )
                         })
