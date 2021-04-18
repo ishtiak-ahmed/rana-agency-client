@@ -2,12 +2,11 @@ import firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from "./firebaseConfig";
 
-firebase.initializeApp(firebaseConfig);
-if (!firebase.app.length) {
+if (!firebase.apps.length) {
+    firebase.initializeApp(firebaseConfig);
 }
 
 export const googleLogin = () => {
-    console.log('loging with google');
     const provider = new firebase.auth.GoogleAuthProvider();
     return firebase.auth()
         .signInWithPopup(provider)

@@ -13,7 +13,8 @@ textarea {
 header {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
+  background-color: red;
 }
 header .banner {
   flex-grow: 1;
@@ -28,10 +29,18 @@ header .banner {
   margin-bottom: 20px;
 }
 
-.service-item {
+.card-item {
   padding: 1em;
   transition: box-shadow 1s ease;
 }
-.service-item:hover {
+.review-item {
+  padding: 1em;
   box-shadow: 2px 2px 30px 10px rgba(0, 0, 0, 0.2);
+}
+.card-item:hover {
+  box-shadow: 2px 2px 30px 10px rgba(0, 0, 0, 0.2);
+}
+
+thead td {
+  font-weight: bold;
 }

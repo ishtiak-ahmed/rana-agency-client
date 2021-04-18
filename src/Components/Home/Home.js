@@ -31,7 +31,7 @@ const Home = () => {
             <section className="text-center bg-light py-5 project">
                 <div className="container">
                     <h2 className='highlights'>Our Ongoing Project</h2>
-                    <div className="row">
+                    <div className="row gx-5">
                         <Project key='1'></Project>
                         <Project key='2'></Project>
                         <Project key='3'></Project>
@@ -39,9 +39,9 @@ const Home = () => {
                 </div>
             </section>
             <section className='text-center py-5 services'>
+                <h2 className='highlights'>Our Most Popular Services</h2>
                 <div className="container">
-                    <h2 className='highlights'>Our Most Popular Services</h2>
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gridGap: '2em' }}>
+                    <div className='row gx-5'>
                         {
                             services.map((service, index) => <Service key={index} data={service}></Service>)
                         }
@@ -57,7 +57,7 @@ const Home = () => {
             <section className='text-center py-5'>
                 <div className="container">
                     <h2 className='highlights'>What our client says</h2>
-                    <div className="row">
+                    <div className="row gx-5">
                         {
                             reviews.map((review, index) => <Review key={index} data={review}></Review>)
                         }
