@@ -16,7 +16,7 @@ const Service = ({ data }) => {
             <img height='200px' width="250px" src={`data:image/png;base64,${data.image.img}`} alt="" />
             <h3>{data.service}</h3>
             <p>{data.description}</p>
-            <button onClick={() => handleBook('hire bodyguard')}>Book Now</button>
+            <button className='btn btn-success' onClick={() => handleBook('hire bodyguard')}>Book Now</button>
         </div>
     );
 };

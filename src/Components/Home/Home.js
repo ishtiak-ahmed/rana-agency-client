@@ -30,7 +30,7 @@ const Home = () => {
             <Header></Header>
             <section className="text-center bg-light py-5 project">
                 <div className="container">
-                    <h2>Our Ongoing Project</h2>
+                    <h2 className='highlights'>Our Ongoing Project</h2>
                     <div className="row">
                         <Project key='1'></Project>
                         <Project key='2'></Project>
@@ -40,13 +40,13 @@ const Home = () => {
             </section>
             <section className='text-center py-5 services'>
                 <div className="container">
-                    <h2>Our Most Popular Services</h2>
+                    <h2 className='highlights'>Our Most Popular Services</h2>
                     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gridGap: '2em' }}>
                         {
                             services.map((service, index) => <Service key={index} data={service}></Service>)
                         }
                     </div>
-                    <button>Explore More</button>
+                    <button className='btn btn-primary mt-5'>Explore More</button>
                 </div>
             </section>
             <section className="text-center py-5 bg-light">
@@ -56,7 +56,7 @@ const Home = () => {
             </section>
             <section className='text-center py-5'>
                 <div className="container">
-                    <h2>What our client says</h2>
+                    <h2 className='highlights'>What our client says</h2>
                     <div className="row">
                         {
                             reviews.map((review, index) => <Review key={index} data={review}></Review>)

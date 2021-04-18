@@ -22,7 +22,14 @@ header .banner {
   height: 100%;
 }
 
+.highlights {
+  color: orangered;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
 .service-item {
+  padding: 1em;
   transition: box-shadow 1s ease;
 }
 .service-item:hover {

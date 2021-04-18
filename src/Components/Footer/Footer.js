@@ -49,7 +49,7 @@ const Footer = () => {
                     </FooterCol>
                 </div>
                 <div className="copyRight text-center">
-                    <p style={{ color: 'lightblue' }}>Copyright {(new Date()).getFullYear()} All Rights Reserved</p>
+                    <p style={{ color: 'lightblue' }}>Copyright {(new Date()).getFullYear()} All Rights Reserved by <a href="https://github.com/ishtiak-ahmed">Ishtiak Ahmed</a></p>
                 </div>
             </div>
         </footer>

@@ -5,7 +5,7 @@ const Project = () => {
         <div className='col-md-4'>
             <h2>Fitness & Health Bootcamp</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum eligendi molestias magnam, consequuntur itaque autem neque ut ducimus facilis ratione.</p>
-            <button>Enroll Now</button>
+            <button className='btn btn-warning'>Enroll Now</button>
         </div>
     );
 };
