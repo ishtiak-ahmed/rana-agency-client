@@ -1,8 +1,5 @@
 import React from 'react';
-import detective from '../../../images/detective.jpg'
-import bodyguard from '../../../images/bodyguard.jpg'
 import salman from '../../../images/salman.jpg'
-import Carousel from './Carousel';
 
 const Banner = () => {
     return (

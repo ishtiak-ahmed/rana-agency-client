@@ -10,7 +10,7 @@ const AddReview = () => {
         console.log(data)
         const newReview = { ...data }
         newReview.img = loggedinUser.photoURL
-        fetch('http://localhost:4753/addReview', {
+        fetch('https://ranaagency.herokuapp.com/addReview', {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(newReview)

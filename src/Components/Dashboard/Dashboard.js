@@ -3,8 +3,6 @@ import { UserContext } from '../../App';
 import Admin from './Admin/Admin';
 import UserDashboard from './UserDashboard/UserDashboard';
 import './Dashboard.css'
-import { Link } from 'react-router-dom';
-import logo from '../../logo.png'
 import Navbar from '../Home/Navbar/Navbar';
 const Dashboard = () => {
     const [loggedinUser] = useContext(UserContext)

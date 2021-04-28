@@ -11,8 +11,6 @@ export const googleLogin = () => {
     return firebase.auth()
         .signInWithPopup(provider)
         .then((result) => {
-            const credential = result.credential;
-            const token = credential.accessToken;
             const user = result.user;
             return user;
         }).catch((error) => {
