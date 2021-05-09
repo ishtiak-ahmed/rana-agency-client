@@ -3,11 +3,27 @@ import ServiceItem from './ServiceItem';
 
 const ManageService = () => {
 
-    const [service, setService] = useState([])
+    const [services, setServices] = useState([])
+    const handleDelete = (event, id) => {
+        console.log("deleting product with id : ", id);
+        fetch(`https://ranaagency.herokuapp.com/deleteService/${id}`, {
+            method: "Delete",
+        })
+            .then((result) => result.json())
+            .then((res) => {
+                if (res) {
+                    // event.target.parentNode.style.display = "none";
+                    alert('item deleted');
+                    const updateServices = services.filter(serv => serv._id !== id)
+                    console.log(updateServices)
+                    setServices(updateServices)
+                }
+            });
+    }
     useEffect(() => {
         fetch('https://ranaagency.herokuapp.com/services')
             .then(res => res.json())
-            .then(data => setService(data))
+            .then(data => setServices(data))
     }, [])
     return (
         <div className='mainbody'>
@@ -21,9 +37,9 @@ const ManageService = () => {
                 </thead>
                 <tbody>
                     {
-                        service.map(serv => {
+                        services.map(serv => {
                             return (
-                                <ServiceItem service={serv}></ServiceItem>
+                                <ServiceItem handleDelete={handleDelete} service={serv}></ServiceItem>
                             )
                         })
                     }
